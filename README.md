@@ -1,16 +1,9 @@
 🛍️ Advanced Product Similarity Engine (Flipkart Dataset)
 
-An advanced content-based product recommendation system built using the Flipkart E-commerce Dataset, featuring:
-
 🧰 Tech Stack
 <p> <img src="https://img.shields.io/badge/Python-3.10+-yellow.svg" /> <img src="https://img.shields.io/badge/Streamlit-Frontend-red.svg" /> <img src="https://img.shields.io/badge/Scikit--learn-ML-green.svg" /> <img src="https://img.shields.io/badge/Pandas-Data%20Processing-blue.svg" /> <img src="https://img.shields.io/badge/Matplotlib-Visualization-orange.svg" /> </p>
 
-<img width="1915" height="985" alt="Screenshot 2026-02-22 031829" src="https://github.com/user-attachments/assets/772a60d4-bc40-40b8-8e2f-fe4b406cb423" />
-
-<img width="1900" height="969" alt="Screenshot 2026-02-22 031925" src="https://github.com/user-attachments/assets/5e1e2f7a-bbf7-4790-bb8d-e80733893dbb" />
-
-<img width="1899" height="985" alt="Screenshot 2026-02-22 031935" src="https://github.com/user-attachments/assets/cd9fa395-92c7-418f-8097-26413268442c" />
-
+A content-based product recommendation system built using classical Machine Learning techniques, replicating the logic behind real-world e-commerce recommenders like Flipkart and Amazon.
 🧠 TF-IDF vector embeddings
 🔁 Cosine similarity scoring
 🏷️ Category-based filtering
@@ -23,125 +16,113 @@ An advanced content-based product recommendation system built using the Flipkart
 🌐 Interactive Streamlit web interface
 This project replicates the logic behind real e-commerce recommendation systems, such as those used by Flipkart and Amazon, built entirely using classical Machine Learning techniques.
 
-🚀 Features
+<img width="1915" height="985" alt="Screenshot 2026-02-22 031829" src="https://github.com/user-attachments/assets/772a60d4-bc40-40b8-8e2f-fe4b406cb423" />
 
-🔍 1. Smart Product Search
-Search for products by typing any keyword - matches update instantly.
+<img width="1900" height="969" alt="Screenshot 2026-02-22 031925" src="https://github.com/user-attachments/assets/5e1e2f7a-bbf7-4790-bb8d-e80733893dbb" />
 
-🛍️ 2. Product Cards UI
-Each product is shown with a modern e-commerce style card:
+<img width="1899" height="985" alt="Screenshot 2026-02-22 031935" src="https://github.com/user-attachments/assets/cd9fa395-92c7-418f-8097-26413268442c" />
 
-Image
-Brand
-Price
-Ratings
+✨ Features
+🔍 Smart Product Search
+Type any keyword to instantly find and select products from the dataset.
+🛍️ E-Commerce Style Product Cards
+Each recommendation is displayed as a modern product card showing:
+
+Product image
+Brand name
+Discounted & retail price
+Overall rating
 Category
-Similarity score
+Cosine similarity score
 
-🏷️ 3. Category Filtering
-Recommendations stay within the same category, ensuring more accurate and meaningful suggestions.
+🏷️ Category-Based Filtering
+Recommendations are filtered to the same category as the query product, ensuring relevant and meaningful results.
+🤖 TF-IDF + Cosine Similarity Engine
 
-🤖 4. TF-IDF + Cosine Similarity ML Engine
-Converts text descriptions into vector representations
-Computes pairwise similarity scores
-Finds top-N most similar products
-📊 5. Cosine Similarity Bar Graph
-Displays similarity strength visually: █████████——— 0.81
+Converts product descriptions into TF-IDF vector representations
+Computes pairwise cosine similarity scores
+Returns the top-N most similar products
 
-🔥 6. Heatmap Visualization
-A full heatmap of the similarity matrix showing:
+📊 Cosine Similarity Bar Graph
+Displays a ranked bar chart of similarity scores for the recommended products.
+🔥 Global Similarity Heatmap
+A full heatmap of the similarity matrix across all products, revealing:
 
 Product clusters
 High-correlation groups
 Outliers
 
 
-⭐ 7. Product Metadata Display
-Each product includes:
+🧰 Tech Stack
+LayerToolsMachine LearningScikit-learn (TF-IDF, Cosine Similarity), NumPy, PandasFrontendStreamlitVisualizationMatplotlib, SeabornDatasetFlipkart E-commerce Dataset (cleaned)
 
-Brand
-Discounted/Retail Price
-Overall Rating
-Category
-Image preview
+🗂️ Project Structure
+flipkart-similarity-engine/
+│
+├── app.py                  # Main Streamlit application
+├── recommender.py          # TF-IDF + cosine similarity logic
+├── data/
+│   └── flipkart_cleaned.csv  # Cleaned dataset
+├── utils/
+│   └── preprocessing.py    # Text cleaning & feature extraction
+├── requirements.txt
+└── README.md
 
+🧹 Dataset Preprocessing
+The raw Flipkart dataset was cleaned to extract the following fields:
+FieldDescriptionproduct_nameName of the productdescriptionFull product descriptionbrandBrand namediscounted_priceSale priceretail_priceOriginal priceoverall_ratingAverage ratingcategoryProduct categoryimageProduct image URL
+Image URLs stored as Python lists (e.g., ["https://rukminim1.flixcart.com/..."]) were cleaned to plain strings.
 
-🎨 8. Clean & Minimal Streamlit UI
-A modern, intuitive interface for exploring recommendations.
-
-🧠 Tech Stack
-Machine Learning
-
-Scikit-learn (TF-IDF, cosine similarity)
-Pandas
-NumPy
-Frontend
-
-Streamlit
-Visualization
-
-Matplotlib
-Seaborn
-Dataset
-
-Flipkart E-commerce Dataset (cleaned)
-🧹 Dataset Cleaning
-
-The Flipkart raw dataset was processed to extract the following fields:
-
-product_name
-
-description
-
-brand
-
-prices
-
-ratings
-
-image URL
-
-category tree
-
-Image URLs stored in list format like:
-
-["https://rukminim1.flixcart.com/..."]
-
-were cleaned to:
-
-https://rukminim1.flixcart.com/...
-
-🔍 How the Recommendation Works
-
-Step 1 — Preprocessing
-
-Descriptions → lowercase → stopwords removed
+🧠 How It Works
+Step 1 — Text Preprocessing
+  Product descriptions → lowercased → stopwords removed → cleaned tokens
 
 Step 2 — TF-IDF Vectorization
-
-Text converted into numerical vectors reflecting word importance.
+  Cleaned text → numerical vectors reflecting word importance across the corpus
 
 Step 3 — Cosine Similarity
+  Dot product of normalized vectors → similarity score between 0 and 1
 
-Measures similarity between product vectors.
+Step 4 — Category Filtering
+  Results filtered to the same category as the query product
 
-Step 4 — Category-Based Filtering
+Step 5 — Visual Output
+  Top-N results displayed as cards + bar graph + global heatmap
 
-Keeps results relevant and meaningful.
+🚀 Getting Started
+Prerequisites
 
-Step 5 — Visual Insights
+Python 3.8+
+pip
 
-Heatmap + bar graphs help understand similarity relationships.
+Installation
+bash# Clone the repository
+git clone https://github.com/riddhi-sharma10/flipkart-similarity-engine.git
+cd flipkart-similarity-engine
 
-✨ Future Enhancements
+# Install dependencies
+pip install -r requirements.txt
+Run the App
+bashstreamlit run app.py
+The app will open in your browser at http://localhost:8501.
 
-Image-based similarity (CNN embeddings)
+📦 Requirements
+streamlit
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
 
-Hybrid recommender system (text + image + metadata)
+Add these to your requirements.txt and install with pip install -r requirements.txt.
 
-User behavior-based personalization
+🔮 Future Enhancements
 
-Product clustering dashboard
+ Image-based similarity using CNN embeddings
+ Hybrid recommender system combining text + image + metadata
+ User behavior-based personalization
+ Product clustering dashboard
+ Deployment on Streamlit Cloud / HuggingFace Spaces
 
 👤 Author
 📧 Email: riddhisharma240604@gmail.com
