@@ -10,8 +10,6 @@ An advanced content-based product recommendation system built using the Flipkart
 
 <img width="1899" height="985" alt="Screenshot 2026-02-22 031935" src="https://github.com/user-attachments/assets/cd9fa395-92c7-418f-8097-26413268442c" />
 
-<img width="1819" height="917" alt="Screenshot 2026-02-22 031945" src="https://github.com/user-attachments/assets/2eb2ba64-ab72-4fd7-840c-326f5f8a9e00" />
-
 🧠 TF-IDF vector embeddings
 🔁 Cosine similarity scoring
 🏷️ Category-based filtering
