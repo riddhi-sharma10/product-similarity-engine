@@ -1,134 +1,89 @@
-🛍️ Product Similarity Engine – Flipkart Dataset
-<p align="center"> <img src="assets/banner.png" width="80%" /> </p>
-
-A high-performance content-based recommendation engine built using
-TF-IDF · Cosine Similarity · Streamlit on the Flipkart E-commerce Dataset.
-
-📸 Screenshots
-
-<img width="1915" height="985" alt="Screenshot 2026-02-22 031829" src="https://github.com/user-attachments/assets/00a470de-9905-4f26-88f9-1b9f3bab1c02" />
-<img width="1900" height="969" alt="Screenshot 2026-02-22 031925" src="https://github.com/user-attachments/assets/df3898be-8899-40ca-b36b-234b2e7a9bb4" />
-<img width="1899" height="985" alt="Screenshot 2026-02-22 031935" src="https://github.com/user-attachments/assets/4a9a2d1c-c77b-406e-b76e-73c51d020f0e" />
-<img width="1819" height="917" alt="Screenshot 2026-02-22 031945" src="https://github.com/user-attachments/assets/d36e188c-f87d-4d9e-9f86-0551ec5237b9" />
+🛍️ Advanced Product Similarity Engine (Flipkart Dataset)
+An advanced content-based product recommendation system built using the Flipkart E-commerce Dataset, featuring:
 
 🧰 Tech Stack
 <p> <img src="https://img.shields.io/badge/Python-3.10+-yellow.svg" /> <img src="https://img.shields.io/badge/Streamlit-Frontend-red.svg" /> <img src="https://img.shields.io/badge/Scikit--learn-ML-green.svg" /> <img src="https://img.shields.io/badge/Pandas-Data%20Processing-blue.svg" /> <img src="https://img.shields.io/badge/Matplotlib-Visualization-orange.svg" /> </p>
-📌 Table of Contents
 
-Overview
+<img width="1915" height="985" alt="Screenshot 2026-02-22 031829" src="https://github.com/user-attachments/assets/772a60d4-bc40-40b8-8e2f-fe4b406cb423" />
 
-Features
+<img width="1900" height="969" alt="Screenshot 2026-02-22 031925" src="https://github.com/user-attachments/assets/5e1e2f7a-bbf7-4790-bb8d-e80733893dbb" />
 
-Architecture
+<img width="1899" height="985" alt="Screenshot 2026-02-22 031935" src="https://github.com/user-attachments/assets/cd9fa395-92c7-418f-8097-26413268442c" />
 
-Dataset
+<img width="1819" height="917" alt="Screenshot 2026-02-22 031945" src="https://github.com/user-attachments/assets/2eb2ba64-ab72-4fd7-840c-326f5f8a9e00" />
 
-Project Structure
+🧠 TF-IDF vector embeddings
+🔁 Cosine similarity scoring
+🏷️ Category-based filtering
+🛍️ E-commerce style product card UI
+📸 Product images
+⭐ Price & ratings display
+🔍 Smart search bar
+📊 Cosine similarity bar graphs
+🔥 Heatmap visualization for global similarity
+🌐 Interactive Streamlit web interface
+This project replicates the logic behind real e-commerce recommendation systems, such as those used by Flipkart and Amazon, built entirely using classical Machine Learning techniques.
 
-Installation
-
-Running the App
-
-How It Works
-
-Dependencies
-
-Future Enhancements
-
-Author
-
-🔍 Overview
-
-Product Similarity Engine is a real-world e-commerce recommendation system inspired by Flipkart/Amazon.
-It uses TF-IDF Vectorization + Cosine Similarity on product metadata to find the most relevant similar products.
-
-This project includes:
-
-✔ Smart search
-✔ Category-based filtering
-✔ Modern e-commerce UI
-✔ Product cards with images, pricing, ratings
-✔ Similarity bar graphs
-✔ Similarity heatmap
-✔ Fully interactive Streamlit web app
-
-⚡ Designed to replicate enterprise-grade product recommendation systems in a lightweight, ML-based format.
-
-🌟 Features
+🚀 Features
 🔍 1. Smart Product Search
+Search for products by typing any keyword - matches update instantly.
 
-Instant search from product names
+🛍️ 2. Product Cards UI
+Each product is shown with a modern e-commerce style card:
 
-Optional category filter
+Image
+Brand
+Price
+Ratings
+Category
+Similarity score
 
-Auto-cleaned category labels
+🏷️ 3. Category Filtering
+Recommendations stay within the same category, ensuring more accurate and meaningful suggestions.
 
-🛒 2. E-commerce Style Product Cards
+🤖 4. TF-IDF + Cosine Similarity ML Engine
+Converts text descriptions into vector representations
+Computes pairwise similarity scores
+Finds top-N most similar products
+📊 5. Cosine Similarity Bar Graph
+Displays similarity strength visually: █████████——— 0.81
 
-Each card displays:
+🔥 6. Heatmap Visualization
+A full heatmap of the similarity matrix showing:
 
-Product Image
-
-Name
+Product clusters
+High-correlation groups
+Outliers
+⭐ 7. Product Metadata Display
+Each product includes:
 
 Brand
-
+Discounted/Retail Price
+Overall Rating
 Category
+Image preview
+🎨 8. Clean & Minimal Streamlit UI
+A modern, intuitive interface for exploring recommendations.
 
-Discounted / Retail Price
+🧠 Tech Stack
+Machine Learning
 
-Rating
+Scikit-learn (TF-IDF, cosine similarity)
+Pandas
+NumPy
+Frontend
 
-Similarity score badge
+Streamlit
+Visualization
 
-🤖 3. ML Engine – TF-IDF + Cosine Similarity
+Matplotlib
+Seaborn
+Dataset
 
-Vectorizes product descriptions
+Flipkart E-commerce Dataset (cleaned)
+🧹 Dataset Cleaning
 
-Computes similarity with cosine similarity
-
-Top-N product recommendations
-
-Category-restricted matching for relevance
-
-📊 4. Visual Insights
-
-Includes:
-
-Cosine Similarity horizontal bar graph
-
-Product-to-product heatmap matrix
-
-Dynamic analytics panel
-
-Top categories explored
-
-🎨 5. Streamlit Frontend
-
-Fully modernized dark-theme UI
-
-Responsive grid layout
-
-Animated hero section
-
-Clean product detail view
-
-Custom CSS styling
-
-🧠 Architecture
-User → Streamlit UI → Search Query
-         ↓
-  TF-IDF Vectorizer (trained)
-         ↓
-Cosine Similarity Matrix
-         ↓
-Top-N Most Similar Products
-         ↓
-Visualizations + Cards + Heatmap
-🗄️ Dataset
-
-Based on Flipkart E-commerce Dataset (cleaned version).
-Includes the following fields:
+The Flipkart raw dataset was processed to extract the following fields:
 
 product_name
 
@@ -136,118 +91,58 @@ description
 
 brand
 
-discounted_price
+prices
 
-retail_price
+ratings
 
-overall_rating
+image URL
 
-category
+category tree
 
-image_url
+Image URLs stored in list format like:
 
-Preprocessing performed via:
+["https://rukminim1.flixcart.com/..."]
 
-Category normalization
+were cleaned to:
 
-Price cleaning
+https://rukminim1.flixcart.com/...
 
-Image URL extraction
+🔍 How the Recommendation Works
 
-Description cleaning
+Step 1 — Preprocessing
 
-📁 Project Structure
-product-similarity-engine/
-│
-├── app.py                      # Streamlit frontend
-├── similarity_engine.py        # ML engine (TF-IDF + similarity matrix)
-├── clean_data.py               # Dataset cleaning script
-│
-├── data/
-│   ├── flipkart_raw.csv
-│   └── products_clean.csv
-│
-├── requirements.txt
-└── README.md
-🛠️ Installation
-1. Clone the Repository
-git clone https://github.com/riddhi-sharma10/product-similarity-engine.git
-cd product-similarity-engine
-2. Create Virtual Environment
-python -m venv venv
+Descriptions → lowercase → stopwords removed
 
-Activate:
+Step 2 — TF-IDF Vectorization
 
-Windows
+Text converted into numerical vectors reflecting word importance.
 
-venv\Scripts\activate
+Step 3 — Cosine Similarity
 
-Mac/Linux
+Measures similarity between product vectors.
 
-source venv/bin/activate
-3. Install Dependencies
-pip install -r requirements.txt
-▶️ Running the Application
+Step 4 — Category-Based Filtering
 
-Run Streamlit:
+Keeps results relevant and meaningful.
 
-streamlit run app.py
+Step 5 — Visual Insights
 
-Expected output:
+Heatmap + bar graphs help understand similarity relationships.
 
-Local URL: http://localhost:8501
+✨ Future Enhancements
 
-Open the URL in your browser.
+Image-based similarity (CNN embeddings)
 
-🔁 How It Works
+Hybrid recommender system (text + image + metadata)
 
-User searches for a product
-
-Engine matches product name → retrieves full record
-
-TF-IDF vector for selected product is compared with all others
-
-Cosine similarity scores computed
-
-Results filtered by category
-
-Output visualized via:
-
-Product cards
-
-Bar graph
-
-Heatmap matrix
-
-📦 Dependencies
-Package	Purpose
-streamlit	Web interface
-pandas	Data loading & cleaning
-numpy	Numerical operations
-scikit-learn	TF-IDF & cosine similarity
-matplotlib	Bar graph & heatmap
-re	Text cleaning
-collections	Analytics counters
-🚀 Future Enhancements
-
-Image similarity using CNN embeddings
-
-Hybrid recommender (text + price + brand + image)
-
-Personalized recommendations
-
-REST API backend for integration
+User behavior-based personalization
 
 Product clustering dashboard
 
-Deploy on HuggingFace / Render
+👤 Author
+📧 Email: riddhisharma240604@gmail.com
+🔗 LinkedIn: https://www.linkedin.com/in/riddhi-sharma10
+💻 GitHub: https://github.com/riddhi-sharma10
 
-👤 Author — Riddhi Sharma
-
-🎓 Computer Science Engineering · AI/ML & Web Dev
-📧 riddhisharma240604@gmail.com
-
-💼 linkedin.com/in/riddhi-sharma10
-🐱 github.com/riddhi-sharma10
-
-<p align="center"> Made with ❤️ by Riddhi Sharma · © 2025 </p>
+If you have suggestions, improvements, or feedback - feel free to reach out or open an issue on GitHub.
+I'm always open to learning, collaboration, and building better ML + Web projects!
