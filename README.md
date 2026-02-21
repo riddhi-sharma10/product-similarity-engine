@@ -54,6 +54,8 @@ A full heatmap of the similarity matrix showing:
 Product clusters
 High-correlation groups
 Outliers
+
+
 ⭐ 7. Product Metadata Display
 Each product includes:
 
