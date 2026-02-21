@@ -1,4 +1,5 @@
 🛍️ Advanced Product Similarity Engine (Flipkart Dataset)
+
 An advanced content-based product recommendation system built using the Flipkart E-commerce Dataset, featuring:
 
 🧰 Tech Stack
@@ -23,6 +24,7 @@ An advanced content-based product recommendation system built using the Flipkart
 This project replicates the logic behind real e-commerce recommendation systems, such as those used by Flipkart and Amazon, built entirely using classical Machine Learning techniques.
 
 🚀 Features
+
 🔍 1. Smart Product Search
 Search for products by typing any keyword - matches update instantly.
 
@@ -60,6 +62,8 @@ Discounted/Retail Price
 Overall Rating
 Category
 Image preview
+
+
 🎨 8. Clean & Minimal Streamlit UI
 A modern, intuitive interface for exploring recommendations.
 
